@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simu - Resultado</title>
+  <meta name="description" content="Simu es una herramienta online para simular y calcular 
+    tu sueldo de manera rápida, facil y segura. Ideal para conocer descuentos, totales y con resultados 
+    en tiempo real.">
+    <!-- Favicon de la pagina -->
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white shadow-xl rounded-2xl p-8 w-full max-w-4xl">
+
+    <!-- 🔹 Header -->
+    <div class="mb-6 border-b pb-4">
+      <h1 class="text-5xl font-extrabold text-[#2563EB] tracking-tight">Simu</h1>
+      <p class="text-sm text-gray-500">Simulador de quincena</p>
+
+      <!-- Futuro -->
+      <div class="mt-2 text-sm text-gray-600">
+        <p><strong>Nombre:</strong> Juan Pérez</p>
+        <p><strong>Mes:</strong> Marzo</p>
+      </div>
+    </div>
+
+    <!-- 🔹 Contenido -->
+    <div class="grid grid-cols-2 gap-6">
+
+      <!-- 🟢 HABERES -->
+      <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+        <h2 class="text-lg font-semibold text-green-600 mb-4">Haberes</h2>
+
+        <div class="space-y-2 text-sm text-gray-700">
+
+          <p><strong>Quincena:</strong> <span id="quincena">1ra</span></p>
+
+          <p><strong>Categoría:</strong> 
+            <span id="categoria">1</span> 
+            ($<span id="valor_hora">5834.50</span>)
+          </p>
+
+          <p><strong>Valor Hora:</strong> 
+            <span id="horas">80</span> hs → 
+            $<span id="sueldo_base">350000</span>
+          </p>
+
+          <p><strong>A cta fut. aumento:</strong> 
+            $<span id="acfa">50000</span>
+          </p>
+
+          <p><strong>Adicionales:</strong> 
+            <span id="cant_adicionales">10</span> → 
+            $<span id="adicionales">40000</span>
+          </p>
+
+          <p><strong>Feriados:</strong> 
+            <span id="cant_feriados">1</span> → 
+            $<span id="feriados">20000</span>
+          </p>
+
+          <p><strong>Presentismo:</strong> 
+            $<span id="presentismo_quin">89926</span>
+          </p>
+
+          <p><strong>Pr. Asist. Perfecta:</strong> 
+            $<span id="presentismo_men">65756</span>
+          </p>
+
+          <p><strong>Antigüedad:</strong> 
+            <span id="antiguedad_anios">10</span>% → 
+            $<span id="antiguedad">30000</span>
+          </p>
+
+          <p><strong>Premio Producción:</strong> 
+            $<span id="premio">80000</span>
+          </p>
+
+        </div>
+
+        <!-- 🔻 Totales -->
+        <div class="mt-6 border-t pt-4 text-sm space-y-2">
+
+          <p class="font-semibold">
+            Total Haberes: 
+            $<span id="total_bruto">600000</span>
+          </p>
+
+          <p class="text-red-600">
+            Descuento (<span id="porcentaje">21</span>%): 
+            -$<span id="descuento">120000</span>
+          </p>
+
+          <p class="text-lg font-bold text-green-700">
+            Neto a Cobrar: 
+            $<span id="total_final">480000</span>
+          </p>
+
+        </div>
+      </div>
+
+      <!-- 🔵 PANEL DERECHO (puede usarse para info extra) -->
+      <div class="bg-white rounded-xl p-6 border shadow-sm">
+
+        <h2 class="text-lg font-semibold text-gray-700 mb-4">Resumen</h2>
+
+        <div class="space-y-3 text-sm text-gray-600">
+
+          <div class="flex justify-between">
+            <span>Ingresos</span>
+            <span class="text-green-600 font-semibold">$600000</span>
+          </div>
+
+          <div class="flex justify-between">
+            <span>Descuentos</span>
+            <span class="text-red-600 font-semibold">-$120000</span>
+          </div>
+
+          <div class="border-t pt-3 flex justify-between font-bold text-gray-800">
+            <span>Total Final</span>
+            <span>$480000</span>
+          </div>
+
+        </div>
+
+        <!-- 🔹 Espacio futuro -->
+        <div class="mt-6 text-xs text-gray-400">
+          <p>* Valores estimados</p>
+          <p>* Sujeto a modificaciones</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
+

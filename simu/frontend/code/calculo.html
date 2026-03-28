@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simu</title>
+  <meta name="description" content="Simu es una herramienta online para simular y calcular 
+    tu sueldo de manera rápida, facil y segura. Ideal para conocer descuentos, totales y con resultados 
+    en tiempo real.">
+
+    <!-- Favicon de la pagina -->
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#F8FAFC] text-[#0F172A] font-sans">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-sm">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+
+    <!-- LOGO -->
+    <h1 class="text-2xl md:text-5xl font-extrabold text-[#2563EB]">
+      Si<span class="text-[#1E40AF]">mu</span>
+    </h1>
+
+    <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+    <button id="menuBtn" class="md:hidden text-2xl">
+      ☰
+    </button>
+
+    <!-- NAV -->
+    <nav id="menu" class="hidden md:flex gap-6 items-center">
+
+      <a href="#" class="text-sm md:text-2xl font-bold text-[#2563EB]">Menu</a><br>
+      <a href="blog.html" class="text-sm md:text-2xl font-bold text-[#2563EB]">Blog</a><br>
+      <a href="quienes_somos.html" class="text-sm md:text-2xl font-bold text-[#2563EB]">Quienes somos</a><br>
+      <a href="contacto.html" class="text-sm md:text-2xl font-bold text-[#2563EB]">Contacto</a><br>
+
+      <div class="flex flex-col md:flex-row gap-2 md:gap-1 mt-4 md:mt-0">
+
+        <p class="px-3 py-1.5 text-sm-[#2563EB] text-sm">Próximamente</p>
+
+        <button class="px-3 py-1 text-xs border border-[#2563EB] text-[#2563EB] rounded-xl hover:bg-[#2563EB] hover:text-white">
+          Iniciar sesión
+        </button>
+
+        <button class="px-4 py-1.5 text-sm bg-[#2563EB] text-white rounded-xl transition duration-300 hover:bg-[#1E40AF] hover:-translate-y-0.5 hover:shadow-lg">
+          Registrate
+        </button>
+
+      </div>
+
+    </nav>
+
+  </div>
+</header>
+  <main>
+  <!-- HERO -->
+  <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-4xl font-bold mb-4">
+        Simulá tu sueldo en segundos
+      </h2>
+      <p class="text-gray-600 mb-6">
+        Simu es una herramienta online para simular y calcular 
+        tu sueldo de manera rápida, facil y segura. Ideal para conocer descuentos, totales y con resultados 
+        en tiempo real.
+        Calculá tu sueldo de forma rápida, clara y profesional.
+      </p>
+      <a href="como_funciona.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-lg transition">
+      ¿Cómo funciona Simu?
+    </a>
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl shadow-lg">
+      <p class="text-sm text-gray-500">Ejemplo</p>
+      <p class="text-xl mt-2">Bruto: $500.000</p>
+      <p class="text-[#EF4444]">Descuentos: -$85.000</p>
+      <p class="text-[#22C55E]">Bonos: +$20.000</p>
+      <hr class="my-3" />
+      <p class="text-2xl font-bold text-[#2563EB]">Neto: $435.000</p>
+    </div>
+  </section>
+
+  <!-- SIMULADOR -->
+  <!-- Carga de datos del usuario -->
+<section class="max-w-4xl mx-auto px-6 pb-20">
+  <div class="bg-white p-8 rounded-2xl shadow-xl">
+    
+    <h3 class="text-3xl font-semibold mb-6 text-[#1E40AF]">Simulador</h3>
+
+    <div class="grid gap-4">
+
+      <!-- INPUTS -->
+      <label class="font-bold">Quincena a Calcular:</label>
+      <select id="quincena_input" placeholder="Elige la Quincena a calcular" class="border rounded-xl px-4 py-3" required>
+        <option value=""></option>
+        <option value="1">Primera Quincena</option>
+        <option value="2">Segunda Quincena</option>
+      </select>
+
+      <label class="font-bold">Categoría:</label>
+      <select id="categoria_input" class="border rounded-xl px-4 py-3" required>
+        <option value=""></option>
+        <option value="esp">Categoría Esp</option>
+        <option value="1">Categoría 1</option>
+        <option value="2">Categoría 2</option>
+        <option value="3">Categoría 3</option>
+        <option value="4">Categoría 4</option>
+      </select>
+
+      <label class="font-bold">Horas Trabajadas:</label>
+      <input id="horas" class="border rounded-xl px-4 py-3" required>
+
+      <label class="font-bold">Adicionales:</label>
+      <input id="adicionales" class="border rounded-xl px-4 py-3" required>
+
+      <label class="font-bold">Feriados:</label>
+      <input id="feriados" class="border rounded-xl px-4 py-3">
+
+      <label class="font-bold">Antigüedad:</label>
+      <input id="antiguedad" class="border rounded-xl px-4 py-3" required>
+
+      <label class="font-bold">Ausencias:</label>
+      <input id="ausencias" class="border rounded-xl px-4 py-3">
+
+      <label class="font-bold">Afiliado:</label>
+      <select id="afiliado" class="border rounded-xl px-4 py-3" required>
+        <option value="false">No afiliado</option>
+        <option value="true">Afiliado</option>
+      </select>
+
+      <!-- 🔹 SOLO Q2 -->
+      <label class="font-bold">Horas 1ra Quincena (solo Q2):</label> 
+      <input id="horas_q1" class="border rounded-xl px-4 py-3">
+
+      <!-- BOTÓN -->
+      <button onclick="calcular()" class="bg-[#2563EB] hover:bg-[#1E40AF] text-white py-3 rounded-xl font-semibold">
+        Calcular
+      </button>
+
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <!-- RESULTADOS -->
+    <h1 class="text-3xl font-semibold mb-6 text-[#1E40AF]">Resultado</h1>
+    <div class="mt-10 bg-gray-50 p-6 rounded-xl space-y-2 text-s">
+
+      <p><strong>Quincena:  </strong><span id="quincena">-</span></p>
+      <p><strong>Categoría:  </strong><span id="categoria">-</span></p>
+      <p><strong>Valor hora:  </strong><span id="valor_hora">-</span></p>
+
+      <p><strong>Horas: </strong><span id="horas"></span></p>
+      <p><strong>Sueldo base: </strong><span id="sueldo_base"></span></p>
+
+      <p><strong>ACFA: </strong><span id="acfa">-</span></p>
+
+      <p><strong>Adicionales: </strong><span id="cant_adicionales"></span> 
+         <span id="adicionales">-</span></p>
+
+      <p><strong>Feriados: </strong><span id="cant_feriados"></span> 
+         <span id="feriados">-</span></p>
+
+      <p><strong>Presentismo: </strong><span id="presentismo_quin">-</span></p>
+      <p><strong>Asistencia perfecta: </strong><span id="presentismo_men">-</span></p>
+
+      <p><strong>Premio producción: </strong><span id="premio">-</span></p>
+      <p><strong>Antigüedad: </strong><span id="antiguedad_anios">0</span> 
+         <span id="antiguedad"></span></p>
+
+      <hr>
+
+      <p><strong>Total bruto: </strong><span id="total_bruto">-</span></p>
+      <p><strong>Descuento: </strong><span id="porcentaje">0</span>%: 
+         <span id="descuento">-</span></p>
+
+      <p class="text-lg font-bold text-green-600"><Strong>
+        Neto final: </Strong><span id="total_final">-</span>
+      </p>
+
+    </div>
+
+  </div>    
+</section>
+
+
+
+  <!-- FEATURES -->
+  <section class="max-w-6xl mx-auto px-6 pb-20 grid md:grid-cols-3 gap-6">
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h4 class="font-semibold mb-2">Rápido</h4>
+      <p class="text-gray-600 text-sm">Calculá tu sueldo en segundos.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h4 class="font-semibold mb-2">Preciso</h4>
+      <p class="text-gray-600 text-sm">Resultados claros y confiables.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h4 class="font-semibold mb-2">Simple</h4>
+      <p class="text-gray-600 text-sm">Diseño pensado para todos.</p>
+    </div>
+  </section>
+  </main>
+  <!-- FOOTER -->
+  <footer class="text-center text-gray-500 text-sm py-6">
+    © 2026 Simu - Maxnova dev - Max Innovation
+  </footer>
+
+<script src="js/script.js"></script>
+<script>
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+</body>
+</html>

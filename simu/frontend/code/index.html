@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simu</title>
+  <meta name="description" content="Simu es una herramienta online para simular y calcular 
+    tu sueldo de manera rápida, facil y segura. Ideal para conocer descuentos, totales y con resultados 
+    en tiempo real.">
+
+    <!-- Favicon de la pagina -->
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#F8FAFC] text-[#0F172A] font-sans">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-sm">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+
+    <!-- LOGO -->
+    <h1 class="text-2xl md:text-5xl font-extrabold text-[#2563EB]">
+      Si<span class="text-[#1E40AF]">mu</span>
+    </h1>
+
+    <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+    <button id="menuBtn" class="md:hidden text-2xl">
+      ☰
+    </button>
+
+    <!-- NAV -->
+    <nav id="menu" class="hidden md:flex gap-6 items-center">
+
+      <a href="#" class="text-sm md:text-2xl font-bold text-[#2563EB]">Menu</a><br>
+      <a href="blog.html" class="text-sm md:text-2xl font-bold text-[#2563EB]">Blog</a><br>
+      <a href="quienes_somos.html" class="text-sm md:text-2xl font-bold text-[#2563EB]">Quienes somos</a><br>
+      <a href="contacto.html" class="text-sm md:text-2xl font-bold text-[#2563EB]">Contacto</a><br>
+
+      <div class="flex flex-col md:flex-row gap-2 md:gap-1 mt-4 md:mt-0">
+
+        <p class="px-3 py-1.5 text-sm-[#2563EB] text-sm">Próximamente</p>
+
+        <button class="px-3 py-1 text-xs border border-[#2563EB] text-[#2563EB] rounded-xl hover:bg-[#2563EB] hover:text-white">
+          Iniciar sesión
+        </button>
+
+        <button class="px-4 py-1.5 text-sm bg-[#2563EB] text-white rounded-xl transition duration-300 hover:bg-[#1E40AF] hover:-translate-y-0.5 hover:shadow-lg">
+          Registrate
+        </button>
+
+      </div>
+
+    </nav>
+
+  </div>
+</header>
+  <hr>
+  <main>
+  <!-- HERO -->
+  <section class="text-center py-20 px-6">
+    <h2 class="text-4xl font-bold mb-4">
+      Calculá tu quincena sin complicaciones
+    </h2>
+    <p class="text-gray-600 mb-8">
+      Simu te ayuda a entender cuánto vas a cobrar de forma rápida y clara.
+    </p>
+    <a href="calculo.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-lg transition">
+      Empezar ahora
+    </a>
+    
+  </section>
+<hr>
+  <!-- SOBRE -->
+  <section id="sobre" class="py-16 bg-white text-center px-6">
+    <h3 class="text-3xl font-bold mb-6">Sobre Simu</h3>
+    <p class="max-w-2xl mx-auto text-gray-600">
+      Simu es un proyecto creado para simplificar el cálculo de quincenas.
+      Nace como una solución práctica para trabajadores que quieren claridad y organizacion
+      sobre sus ingresos sin depender de cálculos complejos.
+    </p>
+  </section>
+<hr>
+  <!-- COMO FUNCIONA -->
+  <section id="funciona" class="py-16 text-center px-6">
+    <h3 class="text-3xl font-bold mb-10">¿Cómo funciona?</h3>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h4 class="font-bold text-lg mb-2">1. Ingresá datos</h4>
+        <p class="text-gray-600">Cargás tu información laboral básica.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h4 class="font-bold text-lg mb-2">2. Procesamiento</h4>
+        <p class="text-gray-600">El sistema calcula automáticamente.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h4 class="font-bold text-lg mb-2">3. Resultado</h4>
+        <p class="text-gray-600">Obtenés una estimación clara.</p>
+      </div>
+
+    </div>
+  </section>
+<hr>
+  <!-- FAQ -->
+  <section id="faq" class="py-16 bg-white text-center px-6">
+    <h3 class="text-3xl font-bold mb-8">Preguntas Frecuentes</h3>
+
+    <div class="max-w-3xl mx-auto space-y-6 text-left">
+      
+      <div>
+        <h4 class="font-semibold">¿Los resultados son exactos?</h4>
+        <p class="text-gray-600">No, son estimaciones basadas en cálculos aproximados.</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">¿Necesito registrarme?</h4>
+        <p class="text-gray-600">Por el momento No, podés usar la herramienta libremente.</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">¿Funciona para cualquier trabajo?</h4>
+        <p class="text-gray-600">Está optimizado para ciertos casos, pero es adaptable.</p>
+      </div>
+
+    </div>
+  </section>
+<hr>
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-16 text-center px-6">
+    <h3 class="text-3xl font-bold mb-6">Contacto</h3>
+    <p class="text-gray-600 mb-4">¿Querés sugerir mejoras o reportar algo?</p>
+    <a href="contacto.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow transition">
+      Enviar mensaje
+    </a>
+  </section>
+<hr>
+<br>
+  <section class="text-gray-600 mb-4 text-center">
+    <h5>¿Tenes dudas? Consulta nuestra politica y privacidad <a href="como_funciona.html"><strong>Aquí</strong></a>.</h5>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+    <p>© 2026 Simu - Desarrollado por Maxnova dev - Max Innovation</p>
+  </footer>
+<script src="script.js"></script>
+<script>
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Simu</title>
+  <meta name="description" content="Simu es una herramienta online para simular y calcular 
+    tu sueldo de manera rápida, facil y segura. Ideal para conocer descuentos, totales y con resultados 
+    en tiempo real.">
+    <!-- Favicon de la pagina -->
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#F8FAFC] text-[#0F172A] font-sans">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-sm">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+
+    <!-- LOGO -->
+    <h1 class="text-2xl md:text-5xl font-extrabold text-[#2563EB]">
+      Si<span class="text-[#1E40AF]">mu</span>
+    </h1>
+
+    <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+    <button id="menuBtn" class="md:hidden text-2xl">
+      ☰
+    </button>
+
+    <!-- NAV -->
+    <nav id="menu" class="hidden md:flex gap-6 items-center">
+
+      <a href="index.html" class="text-sm md:text-2xl font-bold text-[#2563EB]">Menu</a><br>
+      <a href="" class="text-sm md:text-2xl font-bold text-[#2563EB]">Blog</a><br>
+      <a href="quienes_somos.html" class="text-sm md:text-2xl font-bold text-[#2563EB]">Quienes somos</a><br>
+      <a href="contacto.html" class="text-sm md:text-2xl font-bold text-[#2563EB]">Contacto</a><br>
+
+      <div class="flex flex-col md:flex-row gap-2 md:gap-1 mt-4 md:mt-0">
+
+        <p class="px-3 py-1.5 text-sm-[#2563EB] text-sm">Próximamente</p>
+
+        <button class="px-3 py-1 text-xs border border-[#2563EB] text-[#2563EB] rounded-xl hover:bg-[#2563EB] hover:text-white">
+          Iniciar sesión
+        </button>
+
+        <button class="px-4 py-1.5 text-sm bg-[#2563EB] text-white rounded-xl transition duration-300 hover:bg-[#1E40AF] hover:-translate-y-0.5 hover:shadow-lg">
+          Registrate
+        </button>
+
+      </div>
+
+    </nav>
+
+  </div>
+</header>
+<hr>
+  <main class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+       <!-- POSTS -->
+    <div class="md:col-span-2 space-y-8">
+
+      <!-- POST CARD -->
+       <article class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <span class="text-xs text-blue-600 font-semibold">Proximamente Blog</span>
+        <h3 class="text-2xl font-bold mt-2 mb-3">
+          Estamos trabajando para incorporar nuevas funcionalidades que mejoren tu experiencia:
+        </h3>
+        <p class="text-gray-600 mb-4">
+        * 🔐 Registro de usuarios<br>
+        * 👤 Gestión de cuenta personal<br>
+        * 💾 Guardado de simulaciones<br>
+        * 📊 Historial de cálculos realizados<br>
+        </p>
+        <div class="flex justify-between items-center text-sm text-gray-400">
+          <span>5 min lectura</span>
+        </div>
+      </article>
+
+      <!-- POST CARD -->
+      <article class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <span class="text-xs text-blue-600 font-semibold">Desarrollo</span>
+        <h3 class="text-2xl font-bold mt-2 mb-3">
+          Cómo estoy construyendo Simu.
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Un vistazo al desarrollo de este proyecto como Full Stack en formación.
+          Pueden visitar mi perfil de Github para ver como estoy desarrollando Simu.
+        </p>
+        <div class="flex justify-between text-sm text-gray-400">
+          <span>6 min lectura</span>
+        </div>
+      </article>
+
+      <article class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <span class="text-xs text-blue-600 font-semibold">Finanzas</span>
+        <h3 class="text-2xl font-bold mt-2 mb-3">
+          Cómo calcular tu sueldo quincenal paso a paso
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Aprendé a estimar tus ingresos de forma clara y sin errores con una guía simple.
+        </p>
+        <div class="flex justify-between items-center text-sm text-gray-400">
+          <span>5 min lectura</span>
+        </div>
+      </article>
+
+      <!-- POST CARD -->
+      <article class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <span class="text-xs text-blue-600 font-semibold">Trabajo</span>
+        <h3 class="text-2xl font-bold mt-2 mb-3">
+          Errores comunes al calcular tu quincena
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Evitá los errores más frecuentes que pueden afectar tus ingresos.
+        </p>
+        <div class="flex justify-between text-sm text-gray-400">
+          <span>4 min lectura</span>
+        </div>
+      </article>
+
+      
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="space-y-8">
+
+      <!-- SOBRE -->
+      <div class="bg-white p-6 rounded-2xl shadow">
+        <h4 class="font-bold mb-3">Sobre el blog</h4>
+        <p class="text-sm text-gray-600">
+          Este blog comparte contenido sobre ingresos, organización financiera y desarrollo del proyecto Simu.
+        </p>
+      </div>
+
+      <!-- CATEGORIAS -->
+      <div class="bg-white p-6 rounded-2xl shadow">
+        <h4 class="font-bold mb-3">Categorías</h4>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="hover:text-blue-600 cursor-pointer">Finanzas</li>
+          <li class="hover:text-blue-600 cursor-pointer">Trabajo</li>
+          <li class="hover:text-blue-600 cursor-pointer">Educación</li>
+          <li class="hover:text-blue-600 cursor-pointer">Desarrollo</li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div class="bg-blue-600 text-white p-6 rounded-2xl shadow">
+        <h4 class="font-bold mb-2">Probá Simu.</h4>
+        <p class="text-sm mb-4">
+          Calculá tu quincena de forma rápida y simple.
+        </p>
+        <a href="calculo.html" class="bg-white text-blue-600 px-4 py-2 rounded-xl text-sm font-medium">
+          Ir al simulador
+        </a>
+      </div>
+
+    </aside>
+
+  </main>
+  <!-- FOOTER -->
+  <footer class="text-center text-gray-500 text-sm py-6">
+    © 2026 Simu - Maxnova dev - Max Innovation
+  </footer>
+<script>
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+</body>
+</html>
